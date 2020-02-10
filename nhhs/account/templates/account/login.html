@@ -1,0 +1,86 @@
+{% extends 'account/main.html' %}
+{% block content %}  
+
+      <div class="img">
+{% load static %}
+<img src="{%static 'pic/log-img.png'%}"></div>
+
+     
+<div class="login-form">
+   
+   <form method="POST">
+
+    {%csrf_token%}
+
+<div id="login-field">
+    <h1 style="margin-left: -10%">Login Your Account</h1><br>
+    <input style="height: 45px;  width: 300px; border-radius: 10px; border-color: teal;"  type="text" name="username" placeholder=  "username" required=""><br><br>
+    <input style="height: 45px;  width: 300px; border-radius: 10px; border-color: teal;" type="password" name="password" placeholder="password" required=""><br><br>
+    <button style=" border-radius: 10px; margin-left: 29%; width: 100px; " class="btn btn-success"> <strong>Login </strong></button>
+
+    
+
+    <a style="margin-left: 28%;" href="/register">SignUp An Account?</a>
+    
+
+    
+</div>
+   </form>
+
+
+
+   </div>
+
+   <div>
+
+  {% for message in messages %}
+
+  <h3>{{message}}</h3> <!-- error messgae pass if userna and password dont match from auth user data base model-->
+  {% endfor %}
+</div>
+
+<!--======================================================================================= -->
+
+
+              <!-- CSS FILES ONLY FOR LOGIN PAGE -->
+
+
+
+
+
+<style type="text/css">
+      
+      
+         .login-form{
+            margin-left: 55%;
+            margin-top:12%;
+            background-color: white;
+            
+           
+            height: 320px;
+    width: 450px;
+    
+    border-radius: 20px;
+    position: absolute;
+   
+
+         }
+
+#login-field{
+   margin-left: 20%;
+  
+}
+
+
+.img{
+  margin-left: -8%;
+  margin-top: -5%;
+  height: 20px;
+}
+      
+    
+
+
+
+</style>
+{% endblock %}

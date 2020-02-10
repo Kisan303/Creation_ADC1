@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css_files/style.css' %}" type="text/css">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+	
+
+	<title>Home page</title>
+</head>
+<body>
+
+
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">NHHS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      				{% if user.is_authenticated %}
+				<li class="nav-item"> Hello, {{user.username}}</li>
+				<li class="nav-item"><a href="/logout" class="nav-link">LogOut</a></li>
+								{% else %}
+
+                <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+				<li class="nav-item"><a href="/register" class="nav-link">Register</a></li>
+				{% endif %}
+
+			<div class="dropdown">
+    <li class="nav-item"><a class="nav-link"disable >Donate Section</a></li>
+
+      <div class="dropdown-content">
+    <a href="/child_education">Child Education</a>
+    <a href="/homeless_persion">Homeless Person</a>
+     <a href="/health_care">Health care</a>
+  </div>
+</div>
+				
+
+				<li class="nav-item"><a href="/donorform" class="nav-link">Donate</a></li>
+				<li class="nav-item"><a href="/members" class="nav-link">Search</a></li>
+				<li class="nav-item"><a href="/news" class="nav-link">News</a></li>
+				<!-- <li class="nav-item"><a href="/search" class="nav-link">Search</a></li> -->
+				<li class="nav-item"><a href="/upload" class="nav-link">Update</a></li>
+
+				<li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+ <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/MJ40s8AdN6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+	 {% block content %}
+
+
+
+<div class="container">
+  
+ <div class="hope-img"><img style="height: 700px; width: 530px;" src="{%static 'pic/hope.jpg'%}"></div> 
+  <div class="overlay">
+    <div style="margin-left: 50%;" class="text"> Wellcome to our Nepal Helpig<br> Hands Society<br><br>
+
+       <a href='donorform/'><button class="btn btn-success">Donate Now</button></a></div>
+  </div>
+</div>
+
+<h1 style="margin-top: -40%; margin-left:-30%; 
+">We Will Not Leave You As Orphans
+We Will Come To You</h1>
+
+<div id=container>
+  Our Aims To Help
+  <div id=flip>
+    <div><div>Homless Person</div></div>
+    <div><div>Orphans Child</div></div>
+    <div><div>Health Weakness</div></div>
+  </div>
+  People in our Society !
+  
+
+</div>
+
+
+<div class="wrapper">
+  
+  <div class="team-area">
+    <div class="single-team">
+      <div class="img-area">
+        <img src="{%static 'pic/health.jpg'%}"height="325px;" id="moon1">
+      </div>
+      <div class="img-text">
+        <h2>Health Care Sections</h2><br>
+        <h3>If you like to go this page click below button</h3>
+           <a href='donorform/'><button class="btn btn-success">Click</button></a>   
+        
+      </div>
+    </div>
+
+    <div class="single-team2">
+      <div class="img-area">
+        <img src="{%static 'pic/homeless.jpg'%}" height="325px;" id="moon1">
+      </div>
+      <div class="img-text">
+        <h2>Homeless person section</h2><br>
+       
+         <h3>If like to visite This page click below button</h3>
+        <a href='homeless_persion/'><button class="btn btn-success">Click</button></a>
+        
+          
+      </div>
+    </div>
+
+    <div class="single-team3">
+      <div class="img-area">
+        <img src="{%static 'pic/education.jpg'%}" height="325px;" id="moon3">
+      </div>
+      <div class="img-text">
+        <h2>Child Education Section</h2><br>
+        <h3>If like to visite This page click below button</h3>
+        
+        
+         <a href='child_education/'><button class="btn btn-success">Click</button></a>
+        
+          
+      </div>
+    </div>
+
+
+
+
+  
+  
+
+<p>=============Footer==================</p>
+
+
+
+
+ 
+</body>
+</html>
+
+{% endblock %}
+
+
+<!-- ============================================== -->
+	<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  
+ .hope-img{
+
+    margin-top: 0%;
+    margin-left: 89%;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  margin:0px;
+  font-family:'Roboto';
+  text-align:center;
+}
+
+#container {
+  color:#999;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:200px;  
+  position:fixed;
+  width:100%;
+  bottom:45%;
+  display:block;
+  margin-left: -19%;*/
+
+
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+p {
+  position:fixed;
+  width:100%;
+  bottom:30px;
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}
+
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height:;
+}
+
+.overlay {
+  margin-left: 28%;
+  position: absolute;
+  bottom: 100%;
+  left: 57%;
+  right: 0;
+  background-color: transparent;
+  overflow: hidden;
+  width: 63%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0%;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 20%;
+  margin-left: 40%;
+
+  -webkit-transform: translate(-20%, -50%);
+  -ms-transform: traslate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+
+.single-team,.single-team2,  .single-team3{
+  float: left;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background:transparent;
+  margin:0 15px;
+  margin-left: 6%;
+  margin-top: 19%;
+  
+}
+
+
+.single-team2 {
+  margin-left: 3%;
+}
+
+
+.single-team3 {
+  margin-left: 2%;
+ 
+  width:281px;
+
+}
+
+
+
+
+
+
+.img-area{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transform-origin: left;
+  transition: 1s;
+  transform: perspective(1000px) rotateY(0deg);
+
+}
+
+/* white paper info sizing*/
+.img-area img{
+  width: 100%;
+
+}
+
+.img-text, .img-text2{
+  position: absolute;
+  padding: 25px;
+  width: 100%;
+  height: 100%;
+  background:rgba(158, 217, 216, 0.9);
+  z-index: 1;
+  transform-origin: left;
+  transform:perspective(1000px) rotateY(90deg);
+  box-sizing: border-box;
+  text-align: center;
+  transition: 1s;
+
+}
+
+/* for 5th images hover effect for load1 image*/
+.single-team:hover .img-area{
+  transform: perspective(1000px) rotateY(-90deg);
+}
+
+.single-team:hover .img-text{
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+/* for for 6th images hover effect for load2 image*/
+
+.single-team2:hover .img-area{
+  transform: perspective(1000px) rotateY(-90deg);
+}
+
+.single-team2:hover .img-text{
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+
+/* for for 7th images hover effect for load3 image*/
+.single-team3:hover .img-area{
+  transform: perspective(1000px) rotateY(-90deg);
+}
+
+.single-team3:hover .img-text{
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+
+
+
+
+</style>

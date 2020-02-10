@@ -1,0 +1,44 @@
+{% extends 'account/main.html' %}
+{% block content %} 
+
+      <div class="dropdown-content">
+    <a href="/child_education">Child Education</a>
+    <a href="/homeless_persion">Homeless Person</a>
+     <a href="/health_care">Health care</a>
+  </div>
+
+	
+	
+	
+		
+
+	<h1>welcome home from Homepage</h1>
+
+
+	
+
+			{% for creation in creation2 %}
+			<p><b>Title</b>{{creation.Title}}</p>
+			<p><b>Date</b>{{creation.Date}}</p>
+			<img src="{{creation.image.url}}" style="width: 250; height: 250; padding: 5px; border: 2px solid">
+			
+			
+			<p><b>Description</b>{{creation.Description}}</p><br>
+			
+
+
+         <a href="{{creation.image.url}}" download="">Download</a>
+
+        <form action="{% url 'account:deletecreation' creation.pk %}" method="POST">
+    		{% csrf_token %}
+        	<button type="submit">Delete</button>
+		</form>
+			{% endfor %}
+		
+
+
+
+</body>
+</html>
+
+	{% endblock %}

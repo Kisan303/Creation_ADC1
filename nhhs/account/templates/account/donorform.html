@@ -1,0 +1,88 @@
+
+{% extends 'account/main.html' %}
+{% block content %} 
+{%load static%}
+
+		
+
+
+
+
+
+<h1 style="margin-left: 48%;">Donation Account Informations</h1>
+
+<div class="donate-img">
+
+ <img style="height: 750px; width: 800px;" src="{%static 'pic/don-img.jpg'%}"></div>
+<div class="donation-form">
+
+	<form  method='POST'>
+
+
+		{% csrf_token %}
+		  
+		<input style="height: 40px;  width: 300px; border-radius: 10px; border-color: teal;"type="text" name="full_name" placeholder="Full Name" required=""><br><br>
+		
+	
+		<input style="height: 40px;  width: 300px; border-radius: 10px; border-color: green;"type="number" name="contact" placeholder="Contact" required=""><br><br>
+		
+		<input style="height: 40px;  width: 300px; border-radius: 10px; border-color: coral;"type="text" name="address"  placeholder="Address" required=""><br><br>
+		
+		<input style="height: 40px;  width: 300px; border-radius: 10px; border-color: navy;"type="text" name="street"placeholder="Street" required=""><br><br>
+		
+		<input style="height: 40px;  width: 300px; border-radius: 10px; border-color: red;"type="text" name="city"placeholder="City" required=""><br><br>
+		
+		<input style="height: 40px;  width: 300px; border-radius: 10px; border-color: purple;"type="number" name="postal_code"placeholder="Postal Code" required=""><br><br>
+		
+		<input style="height: 40px;  width: 300px; border-radius: 10px; border-color: brown;"type="text" name="country"placeholder="Country" required=""><br><br>
+		
+		<input style="height: 40px;  width: 300px; border-radius: 10px; border-color: black;"type="email" name="email"placeholder="Email" required=""><br><br>
+		
+
+		<select style="height: 40px;  width: 300px; border-radius: 10px; border-color: plum;"name="donate_catagory" >
+			<option>Child Education</option>
+			<option>Poor People</optiton>
+			<option>Homeless Person</option>
+		</select>
+		<br><br>
+		<!--<input type="checkbox" name="child education" value="child education"> Child Education<br>
+  		<input type="checkbox" name="homeless person" value="homeless person"> Homeless Person<br>
+  		<input type="checkbox" name="health care" value="health care" checked> Health Care<br><br>-->
+		
+		<input style="height: 40px;  width: 300px; border-radius: 10px; border-color: teal;"type="number" name="donate_amt"placeholder="Donate amount" required=""><br><br>
+		
+		<input style="height: 70px;  width: 300px; border-radius: 10px; border-color: teal;"type="text" name="comments"placeholder="Comments" required=""><br><br>
+ <button style=" border-radius: 10px; margin-left: 29%; " class="btn btn-success">Donate now</button>
+	
+
+</div>
+
+</body>
+</html>
+
+
+
+
+<!-- ========================================================================================== -->
+
+ 
+<style type="text/css">
+	
+	.donation-form{
+		margin-left: 48%;
+		margin-top: -40%;
+		position: absolute;
+
+	}
+
+
+.donate-img{
+	margin-top: -4%;
+	
+}
+
+
+
+</style>
+
+{%endblock%}

@@ -1,0 +1,435 @@
+<head>
+
+ 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>About-Page</title>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">NHHS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+              {% if user.is_authenticated %}
+        <li class="nav-item"> Hello, {{user.username}}</li>
+        <li class="nav-item"><a href="/logout" class="nav-link">LogOut</a></li>
+                {% else %}
+
+                <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+        <li class="nav-item"><a href="/register" class="nav-link">Register</a></li>
+        {% endif %}
+        <div class="dropdown">
+    <li class="nav-item"><a  class="nav-link" disable >Donate Section</a></li>
+
+      <div class="dropdown-content">
+    <a href="/child_education">Child Education</a>
+    <a href="/homeless_persion">Homeless Person</a>
+     <a href="/health_care">Health care</a>
+  </div>
+</div>
+        
+        <li class="nav-item"><a href="/donorform" class="nav-link">Donate</a></li>
+        <li class="nav-item"><a href="/members" class="nav-link">Search</a></li>
+        <li class="nav-item"><a href="/news" class="nav-link">News</a></li>
+        <!-- <li class="nav-item"><a href="/search" class="nav-link">Search</a></li> -->
+        <li class="nav-item"><a href="/upload" class="nav-link">Update</a></li>
+
+        <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+    </ul>
+  </div>
+</nav>
+  
+
+
+  <header id="twoam">
+    <div class="container-fluid">
+      <div class="row me animated fadeIn">
+        
+      </div>
+      <div id="down" class="animated infinite slideInDown">
+        <i class="fa fa-chevron-circle-down fa-5x" aria-hidden="true"></i>
+      </div>
+    </div>
+  </header>
+
+
+
+  <header id="twoam2">
+    <div class="container-fluid">
+      <div class="row me animated fadeIn">
+        
+      </div>
+      <div id="down" class="animated infinite slideInDown">
+        <i class="fa fa-chevron-circle-down fa-5x" aria-hidden="true"></i>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- about page -->
+  <section id="about" class="container-fluid">
+
+    <div class="row section-banner">
+      <div class="col-md-offset-3 col-md-6 text-center">
+        <div>
+          <span class="line about"></span>
+          <span class="section-title about">about</span>
+          <span class="line about"></span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row max">
+
+      <div class="col-sm-4 text-center">
+        <div class="desc">
+          <div class="icon-me"><i class="fa fa-user"></i></div>
+          <p>Our web application is related with no profit organization called Nepal Helping Hands Society(NHHS).It allows people to come together and join resources in order to acheive  </p>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <div class="desc">
+          <div class="icon-me"><i class="fa fa-mortar-board"></i></div>
+          <p>Our web application is related with no profit organization called Nepal Helping Hands Society (NHHS). It allows people to come together and join resources in order to achieve goals that benefits the purpose for the organization being and it used for betterment of the mission that people seek to complete</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <div class="desc">
+          <div class="icon-me"><i class="fa fa-rocket"></i></div>
+          <p>Our web application is related with no profit organization called Nepal Helping Hands Society (NHHS). It allows people to come together and join resources in order to achieve goals that benefits the purpose for the organization being and it used for betterment of the mission that people seek to complete.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- portfolio projects page -->
+  <section id="portfolio" class="container-fluid">
+
+    <div class="row section-banner">
+      <div class="col-md-offset-3 col-md-6 text-center">
+        <div>
+          <span class="line portfolio"></span>
+          <span class="section-title portfolio">portfolio</span>
+          <span class="line portfolio"></span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row max">
+      <div class="col-sm-offset-2 col-sm-8 text-center">
+        <div class="desc">
+          <p>Our web application is related with no profit organization called Nepal Helping Hands Society (NHHS). It allows people to come together and join resources in order to achieve goals that benefits the purpose for the organization being and it used for betterment of the mission that people seek to complete.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+  </section>
+
+
+  <!-- contact page -->
+ 
+
+
+    <!-- fixed footer for social links -->
+    <footer id='social-footer'>
+
+
+        
+
+
+
+        <div class="text-center copyright">
+          <p style=" font-family: sans-serif;
+  font-size: 1.20em;
+  font-style:;
+  color: white; margin-top: -1%;">All the ©CopyRight claim by Nepal helping hands society</p>
+        </div>
+
+
+    </footer>
+
+
+
+
+
+
+    <!-- ======================================================================== -->
+
+
+
+    <style type="text/css">
+
+      .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+
+  
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+      
+body {
+  padding-top: 50px;
+  padding-bottom: 00px;
+  background-color: #f6f6f6;
+}
+
+
+
+
+
+
+
+#twoam {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(https://images.unsplash.com/photo-1506506637031-5e2cabd00f30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgb(28, 28, 28);
+  color: white;
+}
+
+#twoam2 {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgb(28, 28, 28);
+  color: white;
+}
+
+
+
+.max {
+  max-width: 1300px;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.7em;
+  letter-spacing: 0.03em;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#about {
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+#about .desc {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
+#portfolio {
+  background-color: #f6f6f6;
+  width: 100vw;
+  max-width: 1000px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+#portfolio .desc {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#contact {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1569173675610-42c361a86e37?ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80 );
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 20px;
+}
+
+
+
+.tagline3a, .tagline3b, .tagline3c {
+  font-family: 'courier', sans-serif;
+  font-size: 1.75em;
+  font-style: italic;
+  color: #666;
+  text-align: left;
+  line-height: 1em;
+  text-shadow: 1px 1px black;
+}
+
+.tagline3a {
+  padding-top: 50px;
+}
+
+.tagline3b {
+  padding-left: 30px;
+}
+
+.line {
+  height: 3px;
+  width: 100px;
+  position: relative;
+  top: -12px;
+  display: inline-block;
+  background-color: #999;
+}
+
+.line.about {
+  background-color: rgba(0, 0, 0, 0.54);
+}
+
+.line.portfolio {
+  background-color: rgba(0, 0, 0, 0.54);
+}
+
+.line.contact {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.section-title {
+  font-family: 'lato', sans-serif;
+  font-size: 3.5em;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  padding-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section-title.about {
+  color: rgba(0, 0, 0, 0.54);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.section-title.portfolio {
+  color: rgba(0, 0, 0, 0.54);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.section-title.contact {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.99);
+}
+
+.section-banner {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.project-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.75em;
+  font-weight: 500;
+  padding-top: 4px;
+  padding-bottom: 1px;
+  color: #666;
+  text-align: center;
+}
+
+.project-headings {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.project-body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 1px;
+  line-height: 1.5em;
+  letter-spacing: 0.03em;
+}
+
+
+.intro {
+  height: 100vh;
+  width: 100%;
+}
+
+.content {
+  vertical-align: middle;
+}
+
+
+footer {
+  width: 100vw;
+  height: 7px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1% 5%;
+  text-align: center;
+  background-color: rgba(93, 88, 86, 0.55);
+  opacity: 1;
+  z-index: 100;
+  a {
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #contact {
+    background-attachment: scroll;
+  }
+
+
+</style>
+
+
+
+
+
+
+
+   

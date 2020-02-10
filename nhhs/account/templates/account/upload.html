@@ -1,0 +1,51 @@
+{% extends 'account/main.html' %}
+{% block content %}{%load static%}
+
+
+
+
+	<img style="margin-left:-7%; margin-top: -2%;"  src="{%static 'pic/update-img.png'%}"></div>
+
+<h2 style="margin-left: 65%; margin-top: -39%;">Upload News Here</h2>
+
+<div class="update-form">
+<form method="POST" enctype="multipart/form-data"> 
+	{% csrf_token %}
+
+	<input style="height: 45px;  width: 300px; border-radius: 10px; border-color: teal;" type="text" name="Title" placeholder="Title"><br><br>
+	<input style="height: 45px;  width: 300px; border-radius: 10px; border-color: teal;" type="Date" name="Date" placeholder="Date"><br><br>
+	<input style="height: 45px;  width: 300px; border-radius: 10px; border-color: teal;" type="file" name="image" placeholder="serach images"><br><br>
+	<!--<textarea name="message" id="Description"></textarea><br><br>-->
+	<input style="height: 45px;  width: 300px; border-radius: 10px; border-color: teal;" type="textarea" name="Description" placeholder="Descriptions"><br><br>
+	<button style=" border-radius: 10px; margin-left: 29%; width: 100px; " class="btn btn-success">Upload</button>
+
+</div>
+
+</form>
+
+
+
+
+</body>
+</html>
+
+
+<!-- ================================================================================ -->
+
+<style type="text/css">
+
+.update-form{
+	margin-left: 65%;
+	margin-top: 1%;
+	position: absolute;
+	height: 500px;
+	width: 500px;
+
+
+	
+
+}
+
+</style>
+
+{% endblock %}

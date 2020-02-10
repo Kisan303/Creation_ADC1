@@ -1,2 +1,12 @@
 # Creation_ADC1
- final course work is done after deleting all the old exsting github files 
+ 2nd project is done
+
+
+Group Name= "Creation"
+Project Name= "Nepal Helping Hands Society"
+
+Group Member
+Kisan Rai
+Subash Gurung
+Tulasa Basnet
+Ramkisha GC
