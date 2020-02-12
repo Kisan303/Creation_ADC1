@@ -1,39 +1,29 @@
-{% extends 'account/main.html' %}
+ {% extends 'account/main.html' %}
 {% block content %} 
 
-      <div class="dropdown-content">
+    <div class="dropdown-content">
     <a href="/child_education">Child Education</a>
     <a href="/homeless_persion">Homeless Person</a>
-     <a href="/health_care">Health care</a>
-  </div>
+    <a href="/health_care">Health care</a>
+  	</div>
 
-	
-	
-	
+		{% for creation in creation2 %}
+
+		<h1 style="font-size: 24px"><b>Title: </b>{{creation.Title}}</h1>
+			<h2 style="font-size: 24px"><b>Date: </b>{{creation.Date}}</h2>
 		
-
-	<h1>welcome home from Homepage</h1>
-
-
-	
-
-			{% for creation in creation2 %}
-			<p><b>Title</b>{{creation.Title}}</p>
-			<p><b>Date</b>{{creation.Date}}</p>
-			<img src="{{creation.image.url}}" style="width: 250; height: 250; padding: 5px; border: 2px solid">
+		<img src="{{creation.image.url}}" style="width: 750px; height: 550px; padding: 5px; border: 2px solid;"><br>
+		
+        <div>
 			
-			
-			<p><b>Description</b>{{creation.Description}}</p><br>
-			
-
-
-         <a href="{{creation.image.url}}" download="">Download</a>
-
-        <form action="{% url 'account:deletecreation' creation.pk %}" method="POST">
-    		{% csrf_token %}
-        	<button type="submit">Delete</button>
-		</form>
-			{% endfor %}
+			<h2 style="font-size: 24px"><b>Description: </b>{{creation.Description}}</h3>
+        	<button style="width: 100px; height: 30px"><a href="{{creation.image.url}}" download="">Download</a></button><br><br>
+	        <form action="{% url 'account:deletecreation' creation.pk %}" method="POST">
+	    		{% csrf_token %}
+	        	<button type="submit" style="width: 100px; height: 30px">Delete</button>
+			</form>
+		</div>
+		{% endfor %}
 		
 
 
